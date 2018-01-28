@@ -5,16 +5,6 @@
 
   <p>Welcome to <em>LocalLibrary</em>, a very basic Django website developed as a tutorial example on the Mozilla Developer Network.</p>
 
-<h2>Dynamic content</h2>
-
-  <p>The library has the following record counts:</p>
-  <ul>
-    <li><strong>Books:</strong> {{ num_books }}</li>
-    <li><strong>Copies:</strong> {{ num_instances }}</li>
-    <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
-    <li><strong>Authors:</strong> {{ num_authors }}</li>
-  </ul>
-
 <script>
 var	clsStopwatch = function() {
 		// Private vars
@@ -101,10 +91,21 @@ function reset() {
 </script>
 
 <body onload="show();">
+  <h2>Reading Test</h2>
+  <p>Claire has been wanting a full-length mirror in our New York apartment. How come, I want to know. You can look at your top half in the bathroom and you see your feet any time in the shoestore. But it’s the overview she wants, the ensemble. So we head for Gracious Home and carry one back on the subway. I start wondering whether there might be something for me in this deal after all. Suppose, I say, we put it here, next to the bed? She doesn’t think so. Why not? Next to the bed, she says, might be counterproductive.</p>
 	<div>Time: <span id="time"></span></div>
 	<input type="button" value="start" onclick="start();">
 	<input type="button" value="stop" onclick="stop();">
-	<input type="button" value="reset" onclick="reset()">
+  <input type="button" value="reset" onclick="reset()">
+  <br>
+  <br>
+  <form action="/action_page.php">
+    How long of a read do you prefer?:<br>
+    <input type="text" name="preftime" value="">
+    <br>
+    <input type="submit" value="Submit">
+  </form> 
+
 </body>
 
 {% endblock %}
